@@ -1,0 +1,253 @@
+/* Style global */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-grid {
+        flex-direction: column;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* En-tÃªte */
+header {
+    background: #003366;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header.scrolled {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header.scrolled .nav-links a {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ccff;
+}
+
+/* Section Accueil */
+#hero {
+    position: relative;
+    background: url('./images/foto.png') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filtre gris (0.5 est l'opacitÃ©) */
+    z-index: 1; /* Place la superposition derriÃ¨re le texte */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Place le texte au-dessus de la superposition */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Section GÃ©nÃ©rale */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Section Services */
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service i {
+    font-size: 2rem;
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Container styles */
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    background-color: #00274d;
+    padding: 40px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styles */
+.contact-form-container {
+    flex: 1;
+    padding: 12px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background: #00ccff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #005f8d;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Map styles */
+.map-container {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Hours */
+.contact-hours {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.contact-hours h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-hours p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+
+/* Pied de page */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
